@@ -22,8 +22,8 @@ namespace Helpdesk.Domain.Entities
         public TaskStatus Status { get; set; }
         public DateTime? ResolvedAt { get; set; }
         public ICollection<TaskMessage> Messages { get; set; } = new List<TaskMessage>();
-        public ICollection<ChecklistItem> ChecklistItem { get; set; } = new List<TaskMessage>();
-        public ICollection<TaskAttachment> Attachments {  get; set; } = new List<TaskMessage>();
+        public ICollection<ChecklistItem> ChecklistItems { get; set; } = new List<ChecklistItem>();
+        public ICollection<TaskAttachment> Attachments {  get; set; } = new List<TaskAttachment>();
 
         public void MarkDone()
         {
